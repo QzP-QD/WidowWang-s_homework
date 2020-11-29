@@ -15,7 +15,7 @@ for index, i in enumerate(f1):
 print("-----------")
 
 output_y = []
-f2 = csv.reader(open('TrainSamples.csv.csv','r'))
+f2 = csv.reader(open('TrainLabels.csv.csv','r'))
 for index, i in enumerate(f2):
     temp_x = []
     for elm in range(len(i)):
