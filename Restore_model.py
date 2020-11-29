@@ -12,8 +12,6 @@ for index, i in enumerate(f1):
     if(index < 10):
         print(temp_x)
 
-output_y = []
-
 # 恢复模型
 restored_model = tf.keras.models.load_model('widow_model.h5')
 

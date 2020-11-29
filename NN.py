@@ -15,6 +15,13 @@ for index, i in enumerate(f1):
 print("-----------")
 
 output_y = []
+f2 = csv.reader(open('TrainSamples.csv.csv','r'))
+for index, i in enumerate(f2):
+    temp_x = []
+    for elm in range(len(i)):
+        temp_x.append(int(float(i[elm])))
+    # print(len(temp_x))
+    output_y.insert(index, temp_x)
 
 inputs = tf.keras.Input(shape=(84,))
 x = tf.keras.layers.Dense(169, use_bias=True, activation='sigmoid')(inputs)
