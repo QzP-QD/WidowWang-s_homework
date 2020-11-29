@@ -15,6 +15,11 @@ for index, i in enumerate(f1):
 # 恢复模型
 restored_model = tf.keras.models.load_model('widow_model.h5')
 
+f2 = open("test_case.csv", 'w', newline="")
+writer2 = csv.writer(f2)
+
 for i in range(len(test_case)):
     temp_case = np.array([test_case[i]])
-    print(restored_model.predict(temp_case))
+    writer2.writerow(restored_model.predict(temp_case))
+
+print("Finish!")

@@ -37,3 +37,5 @@ m.fit(input_x, output_y, epochs=1000, batch_size=1, verbose=1)
 
 # 保存模型
 m.save('widow_model.h5')
+
+print("Finish!")
