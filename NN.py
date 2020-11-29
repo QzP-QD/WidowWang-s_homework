@@ -33,7 +33,7 @@ outputs = tf.keras.layers.Dense(10, use_bias=True, activation='sigmoid')(x_1)
 m = tf.keras.Model(inputs, outputs)     # 使用 输入 和 输出 创建模型
 
 m.compile(tf.keras.optimizers.SGD(learning_rate=0.1), 'mse')
-m.fit(input_x, output_y, epochs=1000, batch_size=1, verbose=0)
+m.fit(input_x, output_y, epochs=1000, batch_size=1, verbose=1)
 
 # 保存模型
 m.save('widow_model.h5')
