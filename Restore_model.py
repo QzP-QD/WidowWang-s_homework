@@ -17,4 +17,4 @@ restored_model = tf.keras.models.load_model('widow_model.h5')
 
 for i in range(len(test_case)):
     temp_case = np.array([test_case[i]])
-    print("Case" + str(i) + ": " + str(restored_model.predict(temp_case)) )
+    print(restored_model.predict(temp_case))
