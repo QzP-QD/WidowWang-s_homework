@@ -20,6 +20,6 @@ writer2 = csv.writer(f2)
 
 for i in range(len(test_case)):
     temp_case = np.array([test_case[i]])
-    writer2.writerow(restored_model.predict(temp_case))
+    writer2.writerow( (restored_model.predict(temp_case)).ravel() )
 
 print("Finish!")
