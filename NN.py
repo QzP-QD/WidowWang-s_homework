@@ -23,8 +23,6 @@ for index, i in enumerate(f2):
         else:
             input_label.append(1)
     output_y.insert(index, input_label)
-    if(index < 10):
-        print(input_label)
 
 inputs = tf.keras.Input(shape=(84,))
 x = tf.keras.layers.Dense(169, use_bias=True, activation='sigmoid')(inputs)
