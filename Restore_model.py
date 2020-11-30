@@ -19,13 +19,8 @@ writer2 = csv.writer(f2)
 for i in range(len(test_case)):
     temp_case = np.array([test_case[i]])
     temp_case = (restored_model.predict(temp_case)).ravel();
-    flag = False;
-    for i in range(len(temp_case)):
-        if abs(temp_case[i] - 1) < 0.4 :
-            writer2.writerow([i])
-            flag = True
-            break;
-    if not flag :
-        writer2.writerow([-1])
+    flag = False
+    max_index = (temp_case.tolist() ).index(max(temp_case, key = abs))
+    writer2.writerow([max_index])
 
 print("Finish!")
