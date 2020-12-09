@@ -15,12 +15,12 @@ restored_model = tf.keras.models.load_model('widow_model.h5')
 
 f2 = open("Result.csv", 'w', newline="")
 writer2 = csv.writer(f2)
-
 for i in range(len(test_case)):
     temp_case = np.array([test_case[i]])
-    temp_case = (restored_model.predict(temp_case)).ravel();
-    flag = False
+    temp_case = (restored_model.predict(temp_case)).ravel()
     max_index = (temp_case.tolist() ).index(max(temp_case, key = abs))
     writer2.writerow([max_index])
+
+f2.close()
 
 print("Finish!")
